@@ -1,9 +1,9 @@
 # HTTP
 
-Является оберткой для `service`, которая позволяет обращаться к нему через http соединение.
+Обёртка над `service`, которая позволяет обращаться к нему через http соединение.
 
 Поднимает web-сервер и слушает определенный порт (для nodejs, java). Является входной точкой (для php).
-Обрабатывает входящие запросы. Прокидывает их в соответствующий метод `service`. Отправляет ответ.
+Обрабатывает входящие запросы. Прокидывает их в соответствующий метод `service`. Отправляет ответ клиенту.
 
 ## Пример URL адресов
 
@@ -18,3 +18,20 @@
 Иначе смотрим заголовок `Accept`, чтобы знать тип ответа
   Если есть `application/xml` XML
   Иначе `JSON`
+
+## Структура кода`
+http
+  [component] (request|file|webSocket|MCP|...)
+    getURLScheme
+      [component] (rest|django|OData|...)
+
+    plugins.apply("http-before-get-params", context);
+    getRequestParameters
+      [component] (soap|xml|OData|rest|...)
+    plugins.apply("http-after-get-params", context);
+
+    service();
+
+    plugins.apply("http-before-send-response", context);
+    sendResponse
+      [component] (soap|xml|OData|rest|...)

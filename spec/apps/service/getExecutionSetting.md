@@ -5,13 +5,13 @@
 ## Входящие аргументы
 
 `executionSetting` для конкретного метода;
-`ID_модификатора[]` список модификаторов (опционально);
+`methodName[]` список модификаторов (опционально);
 
 ## Алгоритм работы
 
 ```
 config = executionSetting.default || {};
-for (ID_модификатора[]) {
+for (methodName[]) {
   if (executionSetting[id]) {
     config = mixin(config, executionSetting[id]);
   }

@@ -27,6 +27,25 @@
 
 Последние два аргумента любого метода:
 `context` - см. `context.md`  
-`ID_модификатора[]` - см. `executionSettings.md`  
+`methodName[]` - см. `executionSettings.md`  
 
 В начале каждого метода вызывается `./getExecutionSetting.md`
+
+## Структура кода`
+
+service
+  [methodName] (get|search|update|remove|...)
+    
+    plugins.apply("service-before-validate", context);
+    validate params
+    plugins.apply("service-after-validate", context);
+
+    plugins.apply("service-before-db-query", context);
+    db
+      pg
+        [methodName] (get|search|update|remove|...)
+      mySql
+      ...
+    plugins.apply("service-after-db-query", context);
+
+    any logic
