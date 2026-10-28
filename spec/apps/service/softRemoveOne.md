@@ -1,6 +1,6 @@
 # softRemoveOne
 
-Помечает одну запись удалённой. Признак удаления — `forciblyParameters` этого метода (например `deleted_at` или `is_deleted`).
+Помечает одну запись удалённой. Признак удаления - `forciblyParameters` этого метода (например `deleted_at` или `is_deleted`).
 
 ## Arguments
 

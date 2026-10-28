@@ -1,4 +1,4 @@
-# Сканер BD
+# Парсер базы данных
 
 Подключается к БД. Смотрит какие таблицы в ней есть. Сохраняет JSON файлы с описанием.
 
@@ -13,8 +13,8 @@
 Для каждой таблицы в каталоге `[имя базы]/[имя таблицы]/` сохранить `table.json` и `executionSettings.json` по `../../configs/index.md`.
 
 Один `http.json` в корне каталога сохранения (по умолчанию `../configs/http.json`). В нём маршруты всех таблиц, формат см. `../../configs/http/index.md`, методы по умолчанию см. `../../components/http/rest.md`.
-Сегмент таблицы в URL — `format(имя таблицы, "camelCase")`, см. `../../components/formatter.md`. Пустой результат — маршруты этой таблицы не добавлять.
-Колонки `primaryKey` попадают в путь как `{имя колонки}` в порядке списка. Пустой `primaryKey` — маршруты с ключом не добавлять.
+Сегмент таблицы в URL - `format(имя таблицы, "camelCase")`, см. `../../components/formatter.md`. Пустой результат - маршруты этой таблицы не добавлять.
+Колонки `primaryKey` попадают в путь как `{имя колонки}` в порядке списка. Пустой `primaryKey` - маршруты с ключом не добавлять.
 `updateAll`, `removeAll`, `softRemoveAll` в пути остаются как есть.
 
 Таблица `test_users` с `primaryKey` `["id"]`:
@@ -31,6 +31,7 @@
     "delete": { "method": "removeOne" },
     "post": { "method": "softRemoveOne" }
   },
+  "/testUsers/search": { "post": { "method": "findAll" } },
   "/testUsers/updateAll": { "post": { "method": "updateAll" } },
   "/testUsers/removeAll": { "post": { "method": "removeAll" } },
   "/testUsers/softRemoveAll": { "post": { "method": "softRemoveAll" } }

@@ -1,21 +1,21 @@
 # Спецификация
 
-Контракт модулей. Реализация — `nodejs/`.
+Контракт модулей. Реализация - `nodejs/`.
 
 Запрос идёт так: `http` → `getRequestParameters` → `service` → `db` → `sendResponse`.
 
 ## Конфиги
 
-- [configs/index.md](configs/index.md) — каталог JSON
-- [configs/db.md](configs/db.md) — подключение к БД
-- [configs/tables.md](configs/tables.md) — описание таблицы
-- [configs/executionSettings.md](configs/executionSettings.md) — настройки методов
-- [configs/http/index.md](configs/http/index.md) — карта URL
-- [configs/http/rest.md](configs/http/rest.md) — правила REST-адресов
+- [configs/index.md](configs/index.md) - каталог JSON
+- [configs/db.md](configs/db.md) - подключение к БД
+- [configs/tables.md](configs/tables.md) - описание таблицы
+- [configs/executionSettings.md](configs/executionSettings.md) - настройки методов
+- [configs/http/index.md](configs/http/index.md) - карта URL
+- [configs/http/rest.md](configs/http/rest.md) - правила REST-адресов
 
 ## Общее
 
-- [errors.md](errors.md) — коды и тело ошибки
+- [errors.md](errors.md) - коды и тело ошибки
 - [components/context.md](components/context.md)
 - [components/jsonFile.md](components/jsonFile.md)
 - [components/formatter.md](components/formatter.md)
@@ -27,17 +27,17 @@
 
 ## Service
 
-- [components/service/index.md](components/service/index.md)
-- [components/service/getExecutionSetting.md](components/service/getExecutionSetting.md)
-- [components/service/findOne.md](components/service/findOne.md)
-- [components/service/findAll.md](components/service/findAll.md)
-- [components/service/create.md](components/service/create.md)
-- [components/service/updateOne.md](components/service/updateOne.md)
-- [components/service/updateAll.md](components/service/updateAll.md)
-- [components/service/removeOne.md](components/service/removeOne.md)
-- [components/service/removeAll.md](components/service/removeAll.md)
-- [components/service/softRemoveOne.md](components/service/softRemoveOne.md)
-- [components/service/softRemoveAll.md](components/service/softRemoveAll.md)
+- [apps/service/index.md](apps/service/index.md)
+- [apps/service/getExecutionSetting.md](apps/service/getExecutionSetting.md)
+- [apps/service/findOne.md](apps/service/findOne.md)
+- [apps/service/findAll.md](apps/service/findAll.md)
+- [apps/service/create.md](apps/service/create.md)
+- [apps/service/updateOne.md](apps/service/updateOne.md)
+- [apps/service/updateAll.md](apps/service/updateAll.md)
+- [apps/service/removeOne.md](apps/service/removeOne.md)
+- [apps/service/removeAll.md](apps/service/removeAll.md)
+- [apps/service/softRemoveOne.md](apps/service/softRemoveOne.md)
+- [apps/service/softRemoveAll.md](apps/service/softRemoveAll.md)
 
 ## DB
 

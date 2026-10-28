@@ -11,6 +11,7 @@
   queryParameters: Record<string, any>
   bodyParameters: Record<string, any>
   requestParameters: Record<string, any>
+  requestHeaders?: Record<string, any>;
   traceId?: string | number;
   request?: any;
   response?: any;
@@ -22,6 +23,7 @@
 `queryParameters` см. `getRequestParameters.md`
 `bodyParameters` см. `getRequestParameters.md`
 `requestParameters` см. `getRequestParameters.md`
+`requestHeaders` заголовки запроса в формате `{ key: value }`
 `traceId` индентификатор запроса
 `request` обьект запроса, если данный язык / фреймворк предполагает его;
 `response` обьект ответа, если данный язык / фреймворк предполагает его;

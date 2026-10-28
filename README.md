@@ -1,6 +1,6 @@
 # CRUD API generator
 
-Create a RESTful backend API for your project:
+Create a REST full backend API for your project:
 - any database (PostgreSQL, MySQL, Oracle, SQLite, MariaDB, etc.);
 - any protocol (REST, SOAP, OData, Protobuf, WebSocket, etc.);
 - any platform (Node.js, PHP, Java, etc.);
